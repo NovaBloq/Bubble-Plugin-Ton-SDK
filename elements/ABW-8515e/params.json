@@ -1,0 +1,47 @@
+{
+    "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 15,
+        "width": 15
+    },
+    "display": "[Ton] Converter",
+    "fields": {
+        "ABX": {
+            "caption": "Value [STRING]",
+            "doc": "Value you want to convert [STRING]",
+            "editor": "DynamicValue",
+            "name": "value",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABY": {
+            "caption": "convert",
+            "default_val": "To TON",
+            "doc": "Type of conversion",
+            "editor": "Dropdown",
+            "in_style": true,
+            "name": "convert",
+            "options": "To TON,To nanoTON",
+            "rank": 1
+        }
+    },
+    "icon": "ion-arrow-swap",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABZ": {
+            "caption": "Conversion Result",
+            "doc": "Conversion result",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "result",
+            "value": "number"
+        }
+    }
+}

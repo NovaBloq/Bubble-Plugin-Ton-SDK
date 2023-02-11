@@ -1,0 +1,24 @@
+{
+    "caption": "Get Wallet State",
+    "doc": "Get current state of a given wallet address",
+    "fields": {
+        "AAg": {
+            "caption": "Address",
+            "doc": "Wallet address you want to check.",
+            "editor": "DynamicValue",
+            "name": "address",
+            "optional": false,
+            "rank": 0,
+            "value": "text"
+        },
+        "AAh": {
+            "caption": "Testnet",
+            "default_val": true,
+            "doc": "For checking mainnet, leave it unchecked.",
+            "editor": "Checkbox",
+            "name": "chain",
+            "options": "mainnet, testnet",
+            "rank": 1
+        }
+    }
+}

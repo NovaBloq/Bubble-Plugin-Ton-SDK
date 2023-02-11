@@ -1,0 +1,44 @@
+{
+    "caption": "Connect",
+    "doc": "An action to initialize a connection. It will trigger \"Connection Deep Link Generated\" when called",
+    "fields": {
+        "AAF": {
+            "caption": "Universal Link",
+            "doc": "Universal link to wallet provider",
+            "editor": "DynamicValue",
+            "name": "universal_link",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AAG": {
+            "caption": "Bridge Link",
+            "doc": "Bridge link to wallet provider",
+            "editor": "DynamicValue",
+            "name": "bridge_link",
+            "optional": true,
+            "rank": 4,
+            "value": "text"
+        },
+        "AAU": {
+            "caption": "Wallet Provider",
+            "doc": "Wallet provider by it's name. Get all available wallets in the state called \"Wallet Providers\"",
+            "editor": "DynamicValue",
+            "name": "wallet_provider",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAZ": {
+            "caption": "To connect to a custom wallet provider, introduce it's universal link and bridge link to initiate a custom connection",
+            "editor": "Label",
+            "name": "info",
+            "rank": 2
+        },
+        "ABe": {
+            "caption": "OR - Connect to a Custom Provider (Optional)",
+            "editor": "Label",
+            "name": "info2",
+            "rank": 1
+        }
+    }
+}

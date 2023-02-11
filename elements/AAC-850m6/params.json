@@ -1,0 +1,248 @@
+{
+    "add_hover_pressed": true,
+    "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 15,
+        "width": 15
+    },
+    "display": "[Ton] SDK",
+    "events": {
+        "AAJ": {
+            "caption": "Error",
+            "doc": "Triggered when error handled",
+            "name": "error"
+        },
+        "AAS": {
+            "caption": "Connected",
+            "doc": "Triggered when wallet connected",
+            "name": "connected"
+        },
+        "AAT": {
+            "caption": "Disconnected",
+            "doc": "Triggered when wallet disconnected",
+            "name": "disconnected"
+        },
+        "AAY": {
+            "caption": "Sent",
+            "doc": "Triggered when transaction sent",
+            "name": "sent"
+        },
+        "AAk": {
+            "caption": "[GWS] Balance Fetched",
+            "doc": "Triggered when [Get Wallet State] action finished",
+            "name": "state_fetched"
+        },
+        "AAq": {
+            "caption": "[GT] Transactions Fetched",
+            "doc": "Triggered when [Get Transactions] action finished",
+            "name": "transactions_fetched"
+        },
+        "AAx": {
+            "caption": "Connection Deep Link Generated",
+            "doc": "Triggered when deeplink generation finished",
+            "name": "deeplink_generated"
+        }
+    },
+    "fields": {
+        "AAD": {
+            "caption": "Manifest URL",
+            "doc": "URL to manifest file",
+            "editor": "DynamicValue",
+            "name": "manifest_url",
+            "rank": 0,
+            "value": "text"
+        },
+        "ABb": {
+            "caption": "TonWeb MAINNET API Token",
+            "default_val": "1e142e2922be09ee3d2804446e176333faa2a61e861d4f33b2ad0a5f21bb2943",
+            "doc": "A token used for make useful requests to open network, such as get transactions and wallet state. To get this token you need to check \"https://toncenter.com/\" for more details.",
+            "editor": "DynamicValue",
+            "name": "tonweb_mainnet_token",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABd": {
+            "caption": "TonWeb TESTNET Api Token",
+            "default_val": "6a191ce9cc4eed5dd8297536b0de779922d3bcae40c2c9881abc952a6f66471e",
+            "doc": "A token used for make useful requests to open network, such as get transactions and wallet state. To get this token you need to check \"https://toncenter.com/\" for more details.",
+            "editor": "DynamicValue",
+            "name": "tonweb_testnet_token",
+            "rank": 2,
+            "value": "text"
+        }
+    },
+    "icon": "ion-code-working",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "AAH": {
+            "caption": "Connection Deep Link",
+            "doc": "Link to connect wallet, usually it will be converted to a QR code",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "deeplink",
+            "value": "text"
+        },
+        "AAI": {
+            "caption": "Wallet Providers",
+            "doc": "All available providers, names",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "is_list": true,
+            "name": "wallet_providers",
+            "value": "text"
+        },
+        "AAK": {
+            "caption": "ERROR",
+            "doc": "Error",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "error",
+            "value": "text"
+        },
+        "AAR": {
+            "caption": "Connected",
+            "doc": "Is wallet connected or not",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "connected",
+            "value": "boolean"
+        },
+        "AAV": {
+            "caption": "CHAIN",
+            "doc": "Connected chain",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "chain",
+            "value": "text"
+        },
+        "AAW": {
+            "caption": "Wallet Address",
+            "doc": "Wallet address",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "address",
+            "value": "text"
+        },
+        "AAX": {
+            "caption": "Transaction",
+            "doc": "Transaction data",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "transaction",
+            "value": "text"
+        },
+        "AAa": {
+            "caption": "Wallet Hex Address",
+            "doc": "Wallet address in hex format",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "hex_address",
+            "value": "text"
+        },
+        "AAb": {
+            "caption": "Balance TON",
+            "doc": "Connected wallet's balance in TON",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "balance",
+            "value": "number"
+        },
+        "AAc": {
+            "caption": "Balance nanoTON",
+            "doc": "Connected wallet's balance in nanoTON",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "balance_nano",
+            "value": "number"
+        },
+        "AAi": {
+            "caption": "[GWS] Balance TON",
+            "doc": "Result of [Get Wallet State] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "gws_balance",
+            "value": "number"
+        },
+        "AAj": {
+            "caption": "[GWS] Balance nanoTON",
+            "doc": "Result of [Get Wallet State] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "gws_balance_nano",
+            "value": "number"
+        },
+        "AAr": {
+            "caption": "[GT] Transactions",
+            "doc": "Result of [Get Transactions] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "is_list": true,
+            "name": "transactions",
+            "value": "text"
+        },
+        "AAu": {
+            "caption": "[GWS] Last Transaction Hash",
+            "doc": "Result of [Get Wallet State] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "gws_last_transaction_hash",
+            "value": "text"
+        },
+        "AAv": {
+            "caption": "[GWS] Last Transaction Time",
+            "doc": "Result of [Get Wallet State] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "gws_last_transaction_time",
+            "value": "text"
+        },
+        "AAw": {
+            "caption": "[GWS] Account State",
+            "doc": "Result of [Get Wallet State] action",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "gws_account_state",
+            "value": "text"
+        },
+        "ABa": {
+            "caption": "Transaction Pending",
+            "doc": "Show if transaction is in pending mode",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "transaction_pending",
+            "value": "boolean"
+        },
+        "ABc": {
+            "caption": "Fetching Transactions",
+            "doc": "Is true when fetching transactions request is running",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "fetching_transactions",
+            "value": "boolean"
+        }
+    }
+}

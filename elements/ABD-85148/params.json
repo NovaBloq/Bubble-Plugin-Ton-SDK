@@ -1,0 +1,182 @@
+{
+    "add_is_visible": true,
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 15,
+        "width": 15
+    },
+    "display": "[Ton] Tx Parser",
+    "fields": {
+        "ABE": {
+            "caption": "Transaction",
+            "doc": "Transaction you want to parse and get values easily",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "transaction",
+            "rank": 0,
+            "value": "text"
+        }
+    },
+    "icon": "ion-social-javascript",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABF": {
+            "caption": "Type",
+            "doc": "Transaction type",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "type",
+            "value": "text"
+        },
+        "ABG": {
+            "caption": "Data",
+            "doc": "Transaction data",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "data",
+            "value": "text"
+        },
+        "ABH": {
+            "caption": "Fee",
+            "doc": "Transaction fee",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "fee",
+            "value": "number"
+        },
+        "ABI": {
+            "caption": "Other Fee",
+            "doc": "Transaction other fees",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "other_fee",
+            "value": "number"
+        },
+        "ABJ": {
+            "caption": "Storage Fee",
+            "doc": "Transaction storage fee if used",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "storage_fee",
+            "value": "number"
+        },
+        "ABK": {
+            "caption": "Time",
+            "doc": "Transaction time",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "time",
+            "value": "date"
+        },
+        "ABL": {
+            "caption": "Hash",
+            "doc": "Transaction hash",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "hash",
+            "value": "text"
+        },
+        "ABM": {
+            "caption": "Logical Time",
+            "doc": "Transaction logical time",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "logical_time",
+            "value": "text"
+        },
+        "ABN": {
+            "caption": "[IN] Source",
+            "doc": "Inbox message source address",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "in_source",
+            "value": "text"
+        },
+        "ABO": {
+            "caption": "[IN] Destination",
+            "doc": "Inbox message destination address",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "in_destination",
+            "value": "text"
+        },
+        "ABP": {
+            "caption": "[IN] Message",
+            "doc": "Inbox message",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "in_message",
+            "value": "text"
+        },
+        "ABQ": {
+            "caption": "[IN] Value",
+            "doc": "Inbox message value",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "in_value",
+            "value": "number"
+        },
+        "ABR": {
+            "caption": "[OUT] Source",
+            "doc": "Sent message source address",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "out_source",
+            "value": "text"
+        },
+        "ABS": {
+            "caption": "[OUT] Destination",
+            "doc": "Sent message destination address",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "out_destination",
+            "value": "text"
+        },
+        "ABT": {
+            "caption": "[OUT] Message",
+            "doc": "Sent message",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "out_message",
+            "value": "text"
+        },
+        "ABU": {
+            "caption": "[OUT] Value",
+            "doc": "Sent message value",
+            "initialization_code": {
+                "fn": "function(properties, context) {}"
+            },
+            "name": "out_value",
+            "value": "number"
+        },
+        "ABV": {
+            "caption": "Is Tx Out",
+            "doc": "Determine if transaction is of type sent",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "is_tx_out",
+            "value": "boolean"
+        }
+    }
+}

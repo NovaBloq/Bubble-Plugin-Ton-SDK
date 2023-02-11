@@ -1,0 +1,32 @@
+{
+    "caption": "Get Transactions",
+    "doc": "Get transactions of a given wallet address",
+    "fields": {
+        "AAl": {
+            "caption": "Address",
+            "doc": "Wallet address you want to check.",
+            "editor": "DynamicValue",
+            "name": "address",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAm": {
+            "caption": "Testnet",
+            "default_val": true,
+            "doc": "For checking mainnet balance, leave it unchecked.",
+            "editor": "Checkbox",
+            "name": "chain",
+            "rank": 2
+        },
+        "AAs": {
+            "caption": "Limit",
+            "default_val": 10,
+            "doc": "Amount of transactions. If empty action will return 10 by default",
+            "editor": "DynamicValue",
+            "name": "limit",
+            "optional": true,
+            "rank": 1,
+            "value": "number"
+        }
+    }
+}

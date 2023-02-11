@@ -1,0 +1,30 @@
+{
+    "caption": "Send Transaction",
+    "doc": "Action to sent a transaction to blockchain",
+    "fields": {
+        "AAM": {
+            "caption": "Valid Until",
+            "doc": "Sending transaction deadline - bubble date",
+            "editor": "DynamicValue",
+            "name": "valid_until",
+            "rank": 0,
+            "value": "date"
+        },
+        "AAN": {
+            "caption": "Wallet Address",
+            "doc": "Recipient wallet address",
+            "editor": "DynamicValue",
+            "name": "address",
+            "rank": 1,
+            "value": "text"
+        },
+        "AAO": {
+            "caption": "Amount to Send",
+            "doc": "Amount of TON for send",
+            "editor": "DynamicValue",
+            "name": "amount",
+            "rank": 2,
+            "value": "number"
+        }
+    }
+}
