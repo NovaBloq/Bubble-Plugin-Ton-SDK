@@ -18,4 +18,6 @@ function(instance, properties, context) {
     const unsubscribe = ton.onStatusChange(data.utils.populateAccountStates, data.utils.throwError)
     
     data.ton = ton
+    
+    console.log(data.ton)
 }

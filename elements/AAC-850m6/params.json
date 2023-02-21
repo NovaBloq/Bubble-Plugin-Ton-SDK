@@ -65,7 +65,7 @@
             "value": "text"
         },
         "ABd": {
-            "caption": "TonWeb TESTNET Api Token",
+            "caption": "TonWeb TESTNET API Token",
             "default_val": "6a191ce9cc4eed5dd8297536b0de779922d3bcae40c2c9881abc952a6f66471e",
             "doc": "A token used for make useful requests to open network, such as get transactions and wallet state. To get this token you need to check \"https://toncenter.com/\" for more details.",
             "editor": "DynamicValue",
