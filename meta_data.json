@@ -9,5 +9,6 @@
     "image": "//s3.amazonaws.com/appforest_uf/f1676126930334x924732810923051900/113980577.png",
     "license": "private",
     "name": "TON Connect NoCode SDK",
+    "plugin_instructions": "# Installation\n- Simple add the plugin element on the page\n- Follow the plug app editor example of how to use it's actions and events",
     "sa_node_version": 14
 }
