@@ -10,7 +10,4 @@ function(instance, properties) {
         "background-position": 'center',
         "background-size": 'contain'
     })
-
-
-
 }

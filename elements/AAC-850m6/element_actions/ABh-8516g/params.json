@@ -1,0 +1,48 @@
+{
+    "caption": "Call Contract Method",
+    "fields": {
+        "ABi": {
+            "caption": "Type",
+            "default_val": "Read",
+            "doc": "Method type. Currently supported only Read type",
+            "editor": "Dropdown",
+            "name": "mtype",
+            "options": "Read",
+            "rank": 0
+        },
+        "ABj": {
+            "caption": "Contract Address",
+            "doc": "Contract address",
+            "editor": "DynamicValue",
+            "name": "contract_address",
+            "rank": 1,
+            "value": "text"
+        },
+        "ABk": {
+            "caption": "Method Name",
+            "doc": "Method name from contract",
+            "editor": "DynamicValue",
+            "name": "method_name",
+            "rank": 2,
+            "value": "text"
+        },
+        "ABl": {
+            "caption": "Parameters",
+            "doc": "Parameters to pass. Should be in JSON format. Ex: [1, 2, 'a', 'b']",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "parameters",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "ABm": {
+            "caption": "Testnet",
+            "default_val": false,
+            "doc": "Check if run on testnet environment",
+            "editor": "Checkbox",
+            "name": "chain",
+            "rank": 4
+        }
+    }
+}

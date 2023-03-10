@@ -1,16 +1,3 @@
 function(instance, properties, context) {
-    const { data, publishState, triggerEvent } = instance
-    const { universal_link, bridge_link, wallet_provider } = properties
-    
-    data.wp = data.wproviders.get(wallet_provider)
-    
-    const walletConnectionSource = {
-        universalLink: data.wp.universalLink,
-        bridgeUrl: data.wp.bridgeUrl
-    }
-
-    const universalLink = data.ton.connect(walletConnectionSource)
-    
-    publishState('deeplink', universalLink)
-    triggerEvent('deeplink_generated')
+ function _0x4735(){const _0x27c978=['deeplink_generated','deeplink','connect','2491434sFHhhm','bridgeUrl','5522152pBboCl','get','53643CTDZJp','1332861eDnsGN','2865032oxUYsM','575099eRpbqI','12OuZLLB','wproviders','ton','1160250JMyMeI'];_0x4735=function(){return _0x27c978;};return _0x4735();}const _0x1f74b7=_0x507d;function _0x507d(_0x117c0f,_0x5d6a31){const _0x47356c=_0x4735();return _0x507d=function(_0x507dbd,_0x9a6376){_0x507dbd=_0x507dbd-0xf0;let _0x4aa35d=_0x47356c[_0x507dbd];return _0x4aa35d;},_0x507d(_0x117c0f,_0x5d6a31);}(function(_0x38fc6d,_0x27cca4){const _0x2aeeea=_0x507d,_0x5f539d=_0x38fc6d();while(!![]){try{const _0x5a7517=parseInt(_0x2aeeea(0xfd))/0x1+-parseInt(_0x2aeeea(0xf1))/0x2*(parseInt(_0x2aeeea(0xfc))/0x3)+-parseInt(_0x2aeeea(0xfa))/0x4+parseInt(_0x2aeeea(0xf4))/0x5+parseInt(_0x2aeeea(0xf8))/0x6+-parseInt(_0x2aeeea(0xf0))/0x7+parseInt(_0x2aeeea(0xfe))/0x8;if(_0x5a7517===_0x27cca4)break;else _0x5f539d['push'](_0x5f539d['shift']());}catch(_0x34876a){_0x5f539d['push'](_0x5f539d['shift']());}}}(_0x4735,0xbb92a));const {data,publishState,triggerEvent}=instance,{universal_link,bridge_link,wallet_provider}=properties;data['wp']=data[_0x1f74b7(0xf2)][_0x1f74b7(0xfb)](wallet_provider);const walletConnectionSource={'universalLink':data['wp']['universalLink'],'bridgeUrl':data['wp'][_0x1f74b7(0xf9)]},universalLink=data[_0x1f74b7(0xf3)][_0x1f74b7(0xf7)](walletConnectionSource);publishState(_0x1f74b7(0xf6),universalLink),triggerEvent(_0x1f74b7(0xf5));
 }

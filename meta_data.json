@@ -6,6 +6,7 @@
         "3": "social network"
     },
     "demo_page": "http://ton-nocode.bubbleapps.io/version-test/",
+    "description": "Integrating TON SDK into a no code plugin. Build Apps on TON Blockchain without a single line of code!\n\nFeatures:\n\n- Connect/Disconnect a Wallet such as Tonkeeper, MyTonWallet, etc.\n- Provide a list of wallets that can be connected\n- Option to setup a custom provider\n- Get connected wallet address\n- Get wallet balance\n- Detect connected chain\n- Get a list of all transactions\n- Send tokens\n- Write/Read a Smart Contract\n\nDemo:\nhttp://ton-nocode.bubbleapps.io/version-test/",
     "image": "//s3.amazonaws.com/appforest_uf/f1676126930334x924732810923051900/113980577.png",
     "license": "private",
     "name": "TON Connect NoCode SDK",

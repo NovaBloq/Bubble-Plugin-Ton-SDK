@@ -1,26 +1,3 @@
 function(instance, properties, context) {
-    const { Cell } = TonWeb.boc
-    const { toNano } = TonWeb.utils
-    const { data, triggerEvent, publishState } = instance
-    const { reportDebugger } = context
-    const { address, amount, valid_until } = properties
-    
-    const transaction = {
-        validUntil: valid_until.getTime(),
-        messages: [
-            {
-                address: address,
-                amount: toNano(amount.toString()).toString(),
-            }
-        ]
-    }
-    
-    publishState('transaction_pending', true)
-
-    data.ton.sendTransaction(transaction).then(result => {
-        publishState('transaction', result.boc)
-        triggerEvent('sent')
-    }).catch(data.utils.throwError).finally(() => {
-    	publishState('transaction_pending', false)
-    })
+   const _0x5eb951=_0x1e33;(function(_0x26c8b3,_0x579b26){const _0x46251a=_0x1e33,_0x5504da=_0x26c8b3();while(!![]){try{const _0x1d5bdc=parseInt(_0x46251a(0x152))/0x1*(parseInt(_0x46251a(0x163))/0x2)+parseInt(_0x46251a(0x15e))/0x3*(-parseInt(_0x46251a(0x160))/0x4)+-parseInt(_0x46251a(0x15a))/0x5*(parseInt(_0x46251a(0x162))/0x6)+-parseInt(_0x46251a(0x15d))/0x7*(-parseInt(_0x46251a(0x15b))/0x8)+-parseInt(_0x46251a(0x166))/0x9*(-parseInt(_0x46251a(0x164))/0xa)+-parseInt(_0x46251a(0x159))/0xb+parseInt(_0x46251a(0x158))/0xc*(parseInt(_0x46251a(0x155))/0xd);if(_0x1d5bdc===_0x579b26)break;else _0x5504da['push'](_0x5504da['shift']());}catch(_0x296102){_0x5504da['push'](_0x5504da['shift']());}}}(_0x486c,0xd7ad0));function _0x486c(){const _0x1de374=['1503952CRkNoD','boc','78MBiaNv','2204ejtmiz','18980Ytofqx','transaction','8199eKAZNM','utils','564DucLxF','finally','toString','13KRJEgC','catch','transaction_pending','9645204cXOASJ','12858989SKlpkw','516995ApOXDM','24FyRPwN','getTime','2319793LScNES','6VXHNTS','ton'];_0x486c=function(){return _0x1de374;};return _0x486c();}const {Cell}=TonWeb[_0x5eb951(0x161)],{toNano}=TonWeb['utils'],{data,triggerEvent,publishState}=instance,{reportDebugger}=context,{address,amount,valid_until}=properties,transaction={'validUntil':valid_until[_0x5eb951(0x15c)](),'messages':[{'address':address,'amount':toNano(amount[_0x5eb951(0x154)]())[_0x5eb951(0x154)]()}]};function _0x1e33(_0x1be8f6,_0x2803b9){const _0x486c65=_0x486c();return _0x1e33=function(_0x1e33b9,_0x45e6a3){_0x1e33b9=_0x1e33b9-0x151;let _0x53b0e5=_0x486c65[_0x1e33b9];return _0x53b0e5;},_0x1e33(_0x1be8f6,_0x2803b9);}publishState(_0x5eb951(0x157),!![]),data[_0x5eb951(0x15f)]['sendTransaction'](transaction)['then'](_0xb011cc=>{const _0xa4e61b=_0x5eb951;publishState(_0xa4e61b(0x165),_0xb011cc[_0xa4e61b(0x161)]),triggerEvent('sent');})[_0x5eb951(0x156)](data[_0x5eb951(0x151)]['throwError'])[_0x5eb951(0x153)](()=>{const _0x543e4e=_0x5eb951;publishState(_0x543e4e(0x157),![]);});
 }
