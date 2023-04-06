@@ -1,3 +1,103 @@
 function(instance, context) {
-const _0x3e526e=_0x5d96;function _0x5d96(_0x3d09aa,_0x33b122){const _0x3dfd6a=_0x3dfd();return _0x5d96=function(_0x5d96b8,_0x2f3b38){_0x5d96b8=_0x5d96b8-0x89;let _0x589def=_0x3dfd6a[_0x5d96b8];return _0x589def;},_0x5d96(_0x3d09aa,_0x33b122);}(function(_0x4d178d,_0xd01cbb){const _0x5b806f=_0x5d96,_0x4d4291=_0x4d178d();while(!![]){try{const _0x250cfc=-parseInt(_0x5b806f(0xaa))/0x1+parseInt(_0x5b806f(0xa1))/0x2+-parseInt(_0x5b806f(0x89))/0x3*(-parseInt(_0x5b806f(0xaf))/0x4)+-parseInt(_0x5b806f(0x8d))/0x5+-parseInt(_0x5b806f(0xba))/0x6+-parseInt(_0x5b806f(0x9a))/0x7*(-parseInt(_0x5b806f(0xa2))/0x8)+parseInt(_0x5b806f(0xbc))/0x9*(parseInt(_0x5b806f(0xad))/0xa);if(_0x250cfc===_0xd01cbb)break;else _0x4d4291['push'](_0x4d4291['shift']());}catch(_0x27a278){_0x4d4291['push'](_0x4d4291['shift']());}}}(_0x3dfd,0x58a71));const {Address,fromNano,BN}=TonWeb[_0x3e526e(0x8c)],{toUserFriendlyAddress}=TonConnectSDK,{publishState,triggerEvent,data}=instance,{reportDebugger}=context,env={'-3':_0x3e526e(0xb4),'-239':'mainnet'},utils={'checkConnected':()=>publishState(_0x3e526e(0x90),data['ton'][_0x3e526e(0x90)]),'populateAccountStates':_0xbe36b2=>{const _0x1a73f2=_0x3e526e;if(data[_0x1a73f2(0xb5)][_0x1a73f2(0x90)])try{publishState(_0x1a73f2(0xb3),env[_0xbe36b2[_0x1a73f2(0x96)][_0x1a73f2(0xb3)]]),publishState('address',toUserFriendlyAddress(_0xbe36b2[_0x1a73f2(0x96)][_0x1a73f2(0x98)])),publishState(_0x1a73f2(0xa6),_0xbe36b2[_0x1a73f2(0x96)][_0x1a73f2(0x98)]),publishState('connected',!![]);const _0x4cc282=new Address(_0xbe36b2[_0x1a73f2(0x96)][_0x1a73f2(0x98)]);instance[_0x1a73f2(0x91)][env[_0xbe36b2[_0x1a73f2(0x96)][_0x1a73f2(0xb3)]]][_0x1a73f2(0xa4)](_0x4cc282)[_0x1a73f2(0xa0)](_0x4eecab=>{const _0x59cd4d=_0x1a73f2;publishState(_0x59cd4d(0x9c),fromNano(_0x4eecab)),publishState(_0x59cd4d(0x9e),_0x4eecab);})[_0x1a73f2(0xbe)](utils[_0x1a73f2(0xb9)]),triggerEvent(_0x1a73f2(0x90));}catch(_0x3ec600){}},'throwError':_0x416dc1=>{const _0xa8df6f=_0x3e526e;publishState(_0xa8df6f(0x9b),_0x416dc1['message']),reportDebugger(_0x416dc1[_0xa8df6f(0xa5)]),triggerEvent(_0xa8df6f(0x9b));},'storeWalletProviders':_0x44ecfc=>{const _0x148e1c=_0x3e526e;data[_0x148e1c(0x94)]=new Map(),_0x44ecfc['forEach'](_0x23d265=>{const _0x30a605=_0x148e1c;data['wproviders'][_0x30a605(0x93)](_0x23d265['name'],_0x23d265);}),publishState(_0x148e1c(0xa3),_0x44ecfc['map'](_0x29c03d=>_0x29c03d[_0x148e1c(0xb1)]));},'getWalletState':(_0x568eeb,_0x5b8962)=>{const _0x3693e4=_0x3e526e,_0x41231c=new Address(_0x568eeb);instance[_0x3693e4(0x91)][_0x5b8962?_0x3693e4(0xb4):_0x3693e4(0xb2)]['provider']['getWalletInfo'](_0x568eeb)[_0x3693e4(0xa0)](_0x42022a=>{const _0x791a5=_0x3693e4;publishState(_0x791a5(0xab),fromNano(_0x42022a[_0x791a5(0x9c)])),publishState(_0x791a5(0x8b),_0x42022a[_0x791a5(0x9c)]),publishState(_0x791a5(0xb7),_0x42022a[_0x791a5(0x9f)][_0x791a5(0x97)]),publishState(_0x791a5(0x8a),_0x42022a[_0x791a5(0x9f)]['lt']),publishState('gws_account_state',_0x42022a['account_state']),triggerEvent(_0x791a5(0x92));})[_0x3693e4(0xbe)](utils[_0x3693e4(0xb9)]);},'getTransactions':(_0x1331ad,_0x3c7a61,_0x3cd6fa)=>{const _0xbbc585=_0x3e526e,_0x51256d=new Address(_0x1331ad);publishState(_0xbbc585(0x9d),!![]),instance[_0xbbc585(0x91)][_0x3c7a61?_0xbbc585(0xb4):_0xbbc585(0xb2)]['getTransactions'](_0x51256d,_0x3cd6fa||0xa)[_0xbbc585(0xa0)](_0x3e75c5=>{const _0x102d22=_0xbbc585;publishState('transactions',_0x3e75c5['map'](JSON[_0x102d22(0xa9)])),triggerEvent(_0x102d22(0xac));})['catch'](utils[_0xbbc585(0xb9)])['finally'](()=>{publishState('fetching_transactions',![]);});},'callMethod':(_0x66f02a,_0x18dc2d,_0x20f227,_0x4a814e,_0x320c41)=>{const _0x5077e0=_0x3e526e;publishState(_0x5077e0(0x99),!![]),instance[_0x5077e0(0x91)][_0x320c41?'testnet':_0x5077e0(0xb2)][_0x5077e0(0x8f)](new Address(_0x18dc2d),_0x20f227,_0x4a814e?JSON[_0x5077e0(0xbd)](_0x4a814e):undefined)['then'](_0x562b49=>{const _0x2ce815=_0x5077e0;if(_0x562b49[_0x2ce815(0xae)]!==0x0){const _0x1f9528=new Error(_0x2ce815(0xb8)+JSON[_0x2ce815(0xa9)](_0x562b49),_0x562b49);return utils[_0x2ce815(0xb9)](_0x1f9528);}const _0x33b2ba=[];_0x562b49[_0x2ce815(0xb0)][_0x2ce815(0xa7)](_0x3368de=>{const _0x8a3ff4=_0x2ce815;switch(_0x3368de[0x0]){case'num':_0x33b2ba[_0x8a3ff4(0x8e)](new BN(_0x3368de[0x1][_0x8a3ff4(0xbf)](/0x/,''),0x10)[_0x8a3ff4(0x95)]());break;default:utils[_0x8a3ff4(0xb9)](new Error(_0x8a3ff4(0xbb)+_0x3368de[0x0]));}}),publishState(_0x2ce815(0xa8),_0x33b2ba),triggerEvent('method_run');})[_0x5077e0(0xbe)](utils[_0x5077e0(0xb9)])[_0x5077e0(0xb6)](()=>{const _0x5e6749=_0x5077e0;publishState(_0x5e6749(0x99),![]);});}};instance[_0x3e526e(0x91)][_0x3e526e(0x8c)]=utils;function _0x3dfd(){const _0x3f57ac=['method_run','26453eMgYIz','error','balance','fetching_transactions','balance_nano','last_transaction_id','then','754454yXVoPf','160nnGQcS','wallet_providers','getBalance','message','hex_address','map','method_response','stringify','544771etMXQN','gws_balance','transactions_fetched','10IkfBNe','exit_code','244nudscE','stack','name','mainnet','chain','testnet','ton','finally','gws_last_transaction_hash','Http\x20provider\x20parse\x20response\x20error\x20','throwError','259848tNEREO','Unknown\x20type\x20','2031174cuwUKo','parse','catch','replace','29847aQlWgK','gws_last_transaction_time','gws_balance_nano','utils','1670910ejhDdd','push','call','connected','data','state_fetched','set','wproviders','toString','account','hash','address'];_0x3dfd=function(){return _0x3f57ac;};return _0x3dfd();}
+    const { Address, fromNano, BN } = TonWeb.utils
+    const { toUserFriendlyAddress } = TonConnectSDK
+    const { publishState, triggerEvent, data } = instance
+    const { reportDebugger } = context
+    const env = {
+        '-3': 'testnet',
+        '-239': 'mainnet'
+    }
+
+    const utils = {
+        checkConnected: () => publishState('connected', data.ton.connected),
+
+        populateAccountStates: (acc) => {
+            if (data.ton.connected)
+                try {
+                    publishState('chain', env[acc.account.chain])
+                    publishState('address', toUserFriendlyAddress(acc.account.address))
+                    publishState('hex_address', acc.account.address)
+                    publishState('connected', true)
+
+                    const addr = new Address(acc.account.address)
+
+                    instance.data[env[acc.account.chain]].getBalance(addr).then(balance => {
+                        publishState('balance', fromNano(balance))
+                        publishState('balance_nano', balance)
+                    }).catch(utils.throwError)
+
+                    triggerEvent('connected')
+                } catch (e) { }
+        },
+
+        throwError: (e) => {
+            publishState('error', e.message)
+            reportDebugger(e.message)
+            triggerEvent('error')
+        },
+
+        storeWalletProviders: (wallets) => {
+            data.wproviders = new Map()
+            wallets.forEach(wp => {
+                data.wproviders.set(wp.name, wp)
+            })
+
+            publishState('wallet_providers', wallets.map(wp => wp.name))
+        },
+
+        getWalletState: (address, chain) => {
+            const addr = new Address(address)
+
+            instance.data[chain ? 'testnet' : 'mainnet'].provider.getWalletInfo(address).then(wstate => {
+                publishState('gws_balance', fromNano(wstate.balance))
+                publishState('gws_balance_nano', wstate.balance)
+                publishState('gws_last_transaction_hash', wstate.last_transaction_id.hash)
+                publishState('gws_last_transaction_time', wstate.last_transaction_id.lt)
+                publishState('gws_account_state', wstate.account_state)
+                triggerEvent('state_fetched')
+            }).catch(utils.throwError)
+        },
+
+        getTransactions: (address, chain, limit) => {
+            const addr = new Address(address)
+
+            publishState('fetching_transactions', true)
+
+            instance.data[chain ? 'testnet' : 'mainnet'].getTransactions(addr, limit || 10).then(transactions => {
+                publishState('transactions', transactions.map(JSON.stringify))
+                triggerEvent('transactions_fetched')
+            }).catch(utils.throwError).finally(() => {
+                publishState('fetching_transactions', false)
+            })
+        },
+
+        callMethod: (mtype, address, method, params, chain) => {
+            publishState('method_run', true)
+
+            instance.data[chain ? 'testnet' : 'mainnet'].call(new Address(address), method, params ? JSON.parse(params) : undefined).then(response => {
+                if (response.exit_code !== 0) {
+                    const err = new Error(`Http provider parse response error ${JSON.stringify(response)}`, response)
+                    return utils.throwError(err)
+                }
+
+                const values = []
+
+                response.stack.map(pair => {
+                    switch (pair[0]) {
+                        case "num":
+                            values.push(new BN(pair[1].replace(/0x/, ''), 16).toString())
+                            break
+                        default:
+                            utils.throwError(new Error("Unknown type " + pair[0]))
+                    }
+                })
+                publishState('method_response', values)
+                triggerEvent('method_run')
+            }).catch(utils.throwError).finally(() => {
+                publishState('method_run', false)
+            })
+        }
+    }
+
+    instance.data.utils = utils
 }

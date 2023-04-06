@@ -1,3 +1,26 @@
 function(instance, properties, context) {
-	function _0x15b5(_0x1bbd95,_0x3239ba){const _0x32fe28=_0x32fe();return _0x15b5=function(_0x15b580,_0x5c1790){_0x15b580=_0x15b580-0x1c3;let _0x382c18=_0x32fe28[_0x15b580];return _0x382c18;},_0x15b5(_0x1bbd95,_0x3239ba);}const _0x4266c3=_0x15b5;(function(_0x56f4c9,_0x445971){const _0x256fc0=_0x15b5,_0x498544=_0x56f4c9();while(!![]){try{const _0x1e5c6a=-parseInt(_0x256fc0(0x1c7))/0x1*(-parseInt(_0x256fc0(0x1cc))/0x2)+-parseInt(_0x256fc0(0x1ca))/0x3+parseInt(_0x256fc0(0x1d8))/0x4*(parseInt(_0x256fc0(0x1ce))/0x5)+parseInt(_0x256fc0(0x1d0))/0x6+-parseInt(_0x256fc0(0x1c5))/0x7*(parseInt(_0x256fc0(0x1cf))/0x8)+-parseInt(_0x256fc0(0x1d5))/0x9*(parseInt(_0x256fc0(0x1c6))/0xa)+parseInt(_0x256fc0(0x1d6))/0xb;if(_0x1e5c6a===_0x445971)break;else _0x498544['push'](_0x498544['shift']());}catch(_0x23fff4){_0x498544['push'](_0x498544['shift']());}}}(_0x32fe,0x263f2));function _0x32fe(){const _0x199cdc=['testnet','2723ivTQKD','426540JkuEBA','1QqLBqM','getHttpEndpoint','HttpProvider','606096gQBjwi','finally','87568AHtUgJ','then','5qsVhPZ','2136DjNTgj','1624752fDhYcg','populateAccountStates','onStatusChange','utils','catch','63XDEtSJ','4249707EZFerl','storeWalletProviders','240872vCNgki','throwError','getWallets','ton'];_0x32fe=function(){return _0x199cdc;};return _0x32fe();}const {TonConnect,toUserFriendlyAddress,CHAIN}=TonConnectSDK,{data,publishState,triggerEvent}=instance,{reportDebugger}=context,{manifest_url,tonweb_testnet_token,tonweb_mainnet_token}=properties;Promise['all']([TonGateway[_0x4266c3(0x1c8)]({'network':_0x4266c3(0x1c4)}),TonGateway[_0x4266c3(0x1c8)]()])[_0x4266c3(0x1cd)](_0x5f6ea1=>{const _0x12db6f=_0x4266c3;data[_0x12db6f(0x1c4)]=new TonWeb(new TonWeb[(_0x12db6f(0x1c9))](_0x5f6ea1[0x0])),data['mainnet']=new TonWeb(new TonWeb[(_0x12db6f(0x1c9))](_0x5f6ea1[0x1]));})[_0x4266c3(0x1d4)](data[_0x4266c3(0x1d3)][_0x4266c3(0x1d9)])[_0x4266c3(0x1cb)](()=>{const _0x43ec94=_0x4266c3,_0x55beaf=new TonConnect({'manifestUrl':manifest_url});_0x55beaf[_0x43ec94(0x1da)]()[_0x43ec94(0x1cd)](data['utils'][_0x43ec94(0x1d7)])[_0x43ec94(0x1d4)](data[_0x43ec94(0x1d3)][_0x43ec94(0x1d9)]),_0x55beaf['restoreConnection']()[_0x43ec94(0x1cd)](()=>{const _0x309c7d=_0x43ec94;data[_0x309c7d(0x1d3)][_0x309c7d(0x1d1)](_0x55beaf);})[_0x43ec94(0x1d4)](data['utils'][_0x43ec94(0x1d9)]);const _0x40b3f8=_0x55beaf[_0x43ec94(0x1d2)](data[_0x43ec94(0x1d3)][_0x43ec94(0x1d1)],data[_0x43ec94(0x1d3)][_0x43ec94(0x1d9)]);data[_0x43ec94(0x1c3)]=_0x55beaf;});
+    const { TonConnect, toUserFriendlyAddress, CHAIN } = TonConnectSDK
+    const { data, publishState, triggerEvent } = instance
+    const { reportDebugger } = context
+    const { manifest_url, tonweb_testnet_token, tonweb_mainnet_token } = properties
+
+    Promise.all([
+        TonGateway.getHttpEndpoint({ network: "testnet" }),
+        TonGateway.getHttpEndpoint()
+    ]).then(endpoints => {
+        data.testnet = new TonWeb(new TonWeb.HttpProvider(endpoints[0]))
+        data.mainnet = new TonWeb(new TonWeb.HttpProvider(endpoints[1]))
+    }).catch(data.utils.throwError).finally(() => {
+        const ton = new TonConnect({ manifestUrl: manifest_url })
+
+        ton.getWallets().then(data.utils.storeWalletProviders).catch(data.utils.throwError)
+
+        ton.restoreConnection().then(() => {
+            data.utils.populateAccountStates(ton)
+        }).catch(data.utils.throwError)
+
+        const unsubscribe = ton.onStatusChange(data.utils.populateAccountStates, data.utils.throwError)
+
+        data.ton = ton
+    })
 }
